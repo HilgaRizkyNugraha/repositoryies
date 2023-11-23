@@ -28,4 +28,7 @@ Route::get('/', function () {
 
 //127.0.0.1:8000
 Route::resource('user', UserController::class);
-Route::get('/user/caridata', [UserController::class, 'caridata'])->name('user.caridata'); 
+Route::get('/user/read', [UserController::class, 'read'])->name('user.read'); 
+Route::get('/user/create/', [UserController::class, 'create'])->name('user.create'); 
+Route::get('/user/delete/', [UserController::class, 'delete'])->name('user.delete'); 
+Route::get('/user/update/', [UserController::class, 'update'])->name('user.update'); 

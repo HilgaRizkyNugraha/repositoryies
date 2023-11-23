@@ -17,4 +17,11 @@ class UserController extends Controller
             return "Ini Adalah halaman create method create";
 
     }
+    
+    public Function delete()
+    {
+            // 127.0.0.1:8000/user/delete
+            return "Ini Adalah halaman delete method delete";
+
+    }
 }
