@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index');
+// Route::get('/user', [UserController::class, 'index'])->name('user'); 
+// Route::get('/user/create', [UserController::class, 'create'])->name('user.create'); 
+
+//127.0.0.1:8000
+Route::resource('user', UserController::class);
+Route::get('/user/caridata', [UserController::class, 'caridata'])->name('user.caridata'); 
